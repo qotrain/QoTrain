@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4253731E1323A9640084BD5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4253731D1323A9640084BD5B /* UIKit.framework */; };
+		425373201323A9640084BD5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4253731F1323A9640084BD5B /* Foundation.framework */; };
+		425373221323A9640084BD5B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425373211323A9640084BD5B /* CoreGraphics.framework */; };
+		42DE1F69135B92FC00D273DD /* checkbox_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F68135B92FC00D273DD /* checkbox_highlighted.png */; };
+		42DE1F7C135B932100D273DD /* checkbox_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F6B135B932100D273DD /* checkbox_normal.png */; };
+		42DE1F7D135B932100D273DD /* checkbox_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F6C135B932100D273DD /* checkbox_selected.png */; };
+		42DE1F7E135B932100D273DD /* community.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F6D135B932100D273DD /* community.png */; };
+		42DE1F7F135B932100D273DD /* CommunityTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F6E135B932100D273DD /* CommunityTableView.xib */; };
+		42DE1F80135B932100D273DD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F6F135B932100D273DD /* Default.png */; };
+		42DE1F81135B932100D273DD /* FindPeopleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F70135B932100D273DD /* FindPeopleViewController.xib */; };
+		42DE1F82135B932100D273DD /* LeaderboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F71135B932100D273DD /* LeaderboardViewController.xib */; };
+		42DE1F83135B932100D273DD /* Login_Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F72135B932100D273DD /* Login_Orange.png */; };
+		42DE1F85135B932100D273DD /* loginbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F74135B932100D273DD /* loginbox.png */; };
+		42DE1F86135B932100D273DD /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F75135B932100D273DD /* LoginViewController.xib */; };
+		42DE1F87135B932100D273DD /* MyWorkoutTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F76135B932100D273DD /* MyWorkoutTableView.xib */; };
+		42DE1F89135B932100D273DD /* Register_Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F78135B932100D273DD /* Register_Orange.png */; };
+		42DE1F8A135B932100D273DD /* schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F79135B932100D273DD /* schedule.png */; };
+		42DE1F8B135B932100D273DD /* workout.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F7A135B932100D273DD /* workout.png */; };
+		42DE1F8C135B932100D273DD /* WorkoutDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F7B135B932100D273DD /* WorkoutDetailViewController.xib */; };
+		42DE1F8F135B936000D273DD /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F8D135B936000D273DD /* MainWindow.xib */; };
+		42DE1F90135B936000D273DD /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42DE1F8E135B936000D273DD /* SecondView.xib */; };
+		42DE1FA5135B937200D273DD /* CommunityNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1F92135B937200D273DD /* CommunityNavController.m */; };
+		42DE1FA6135B937200D273DD /* CommunityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1F94135B937200D273DD /* CommunityTableViewController.m */; };
+		42DE1FA7135B937200D273DD /* FindPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1F96135B937200D273DD /* FindPeopleViewController.m */; };
+		42DE1FA8135B937200D273DD /* LeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1F98135B937200D273DD /* LeaderboardViewController.m */; };
+		42DE1FA9135B937200D273DD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1F9A135B937200D273DD /* LoginViewController.m */; };
+		42DE1FAA135B937200D273DD /* MyWorkoutNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1F9C135B937200D273DD /* MyWorkoutNavController.m */; };
+		42DE1FAB135B937200D273DD /* MyWorkoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1F9E135B937200D273DD /* MyWorkoutTableViewController.m */; };
+		42DE1FAC135B937200D273DD /* QoTrainAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1FA0135B937200D273DD /* QoTrainAppDelegate.m */; };
+		42DE1FAD135B937200D273DD /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1FA2135B937200D273DD /* SecondViewController.m */; };
+		42DE1FAE135B937200D273DD /* WorkoutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1FA4135B937200D273DD /* WorkoutDetailViewController.m */; };
+		42DE1FB1135B938D00D273DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DE1FAF135B938D00D273DD /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		425373191323A9640084BD5B /* QoTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QoTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4253731D1323A9640084BD5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4253731F1323A9640084BD5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		425373211323A9640084BD5B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42DE1F68135B92FC00D273DD /* checkbox_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_highlighted.png; path = Resources/checkbox_highlighted.png; sourceTree = SOURCE_ROOT; };
+		42DE1F6B135B932100D273DD /* checkbox_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_normal.png; path = Resources/checkbox_normal.png; sourceTree = SOURCE_ROOT; };
+		42DE1F6C135B932100D273DD /* checkbox_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkbox_selected.png; path = Resources/checkbox_selected.png; sourceTree = SOURCE_ROOT; };
+		42DE1F6D135B932100D273DD /* community.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = community.png; path = Resources/community.png; sourceTree = SOURCE_ROOT; };
+		42DE1F6E135B932100D273DD /* CommunityTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CommunityTableView.xib; path = Resources/CommunityTableView.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F6F135B932100D273DD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = SOURCE_ROOT; };
+		42DE1F70135B932100D273DD /* FindPeopleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FindPeopleViewController.xib; path = Resources/FindPeopleViewController.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F71135B932100D273DD /* LeaderboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LeaderboardViewController.xib; path = Resources/LeaderboardViewController.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F72135B932100D273DD /* Login_Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Login_Orange.png; path = Resources/Login_Orange.png; sourceTree = SOURCE_ROOT; };
+		42DE1F74135B932100D273DD /* loginbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loginbox.png; path = Resources/loginbox.png; sourceTree = SOURCE_ROOT; };
+		42DE1F75135B932100D273DD /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = Resources/LoginViewController.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F76135B932100D273DD /* MyWorkoutTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyWorkoutTableView.xib; path = Resources/MyWorkoutTableView.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F78135B932100D273DD /* Register_Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Register_Orange.png; path = Resources/Register_Orange.png; sourceTree = SOURCE_ROOT; };
+		42DE1F79135B932100D273DD /* schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = schedule.png; path = Resources/schedule.png; sourceTree = SOURCE_ROOT; };
+		42DE1F7A135B932100D273DD /* workout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = workout.png; path = Resources/workout.png; sourceTree = SOURCE_ROOT; };
+		42DE1F7B135B932100D273DD /* WorkoutDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WorkoutDetailViewController.xib; path = Resources/WorkoutDetailViewController.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F8D135B936000D273DD /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainWindow.xib; path = Resources/MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F8E135B936000D273DD /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SecondView.xib; path = Resources/SecondView.xib; sourceTree = SOURCE_ROOT; };
+		42DE1F91135B937200D273DD /* CommunityNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommunityNavController.h; path = Classes/CommunityNavController.h; sourceTree = SOURCE_ROOT; };
+		42DE1F92135B937200D273DD /* CommunityNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommunityNavController.m; path = Classes/CommunityNavController.m; sourceTree = SOURCE_ROOT; };
+		42DE1F93135B937200D273DD /* CommunityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommunityTableViewController.h; path = Classes/CommunityTableViewController.h; sourceTree = SOURCE_ROOT; };
+		42DE1F94135B937200D273DD /* CommunityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommunityTableViewController.m; path = Classes/CommunityTableViewController.m; sourceTree = SOURCE_ROOT; };
+		42DE1F95135B937200D273DD /* FindPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindPeopleViewController.h; path = Classes/FindPeopleViewController.h; sourceTree = SOURCE_ROOT; };
+		42DE1F96135B937200D273DD /* FindPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindPeopleViewController.m; path = Classes/FindPeopleViewController.m; sourceTree = SOURCE_ROOT; };
+		42DE1F97135B937200D273DD /* LeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeaderboardViewController.h; path = Classes/LeaderboardViewController.h; sourceTree = SOURCE_ROOT; };
+		42DE1F98135B937200D273DD /* LeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeaderboardViewController.m; path = Classes/LeaderboardViewController.m; sourceTree = SOURCE_ROOT; };
+		42DE1F99135B937200D273DD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Classes/LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		42DE1F9A135B937200D273DD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Classes/LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		42DE1F9B135B937200D273DD /* MyWorkoutNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWorkoutNavController.h; path = Classes/MyWorkoutNavController.h; sourceTree = SOURCE_ROOT; };
+		42DE1F9C135B937200D273DD /* MyWorkoutNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyWorkoutNavController.m; path = Classes/MyWorkoutNavController.m; sourceTree = SOURCE_ROOT; };
+		42DE1F9D135B937200D273DD /* MyWorkoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWorkoutTableViewController.h; path = Classes/MyWorkoutTableViewController.h; sourceTree = SOURCE_ROOT; };
+		42DE1F9E135B937200D273DD /* MyWorkoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyWorkoutTableViewController.m; path = Classes/MyWorkoutTableViewController.m; sourceTree = SOURCE_ROOT; };
+		42DE1F9F135B937200D273DD /* QoTrainAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QoTrainAppDelegate.h; path = Classes/QoTrainAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		42DE1FA0135B937200D273DD /* QoTrainAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QoTrainAppDelegate.m; path = Classes/QoTrainAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		42DE1FA1135B937200D273DD /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = Classes/SecondViewController.h; sourceTree = SOURCE_ROOT; };
+		42DE1FA2135B937200D273DD /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = Classes/SecondViewController.m; sourceTree = SOURCE_ROOT; };
+		42DE1FA3135B937200D273DD /* WorkoutDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorkoutDetailViewController.h; path = Classes/WorkoutDetailViewController.h; sourceTree = SOURCE_ROOT; };
+		42DE1FA4135B937200D273DD /* WorkoutDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WorkoutDetailViewController.m; path = Classes/WorkoutDetailViewController.m; sourceTree = SOURCE_ROOT; };
+		42DE1FAF135B938D00D273DD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Other Sources/main.m"; sourceTree = SOURCE_ROOT; };
+		42DE1FB0135B938D00D273DD /* QoTrain-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QoTrain-Prefix.pch"; path = "Other Sources/QoTrain-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		42DE1FD4135B98A100D273DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		42DE1FD6135B98AA00D273DD /* QoTrain-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "QoTrain-Info.plist"; path = "Resources/QoTrain-Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		425373161323A9640084BD5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4253731E1323A9640084BD5B /* UIKit.framework in Frameworks */,
+				425373201323A9640084BD5B /* Foundation.framework in Frameworks */,
+				425373221323A9640084BD5B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4253730E1323A9640084BD5B = {
+			isa = PBXGroup;
+			children = (
+				425373231323A9640084BD5B /* QoTrain */,
+				4253731C1323A9640084BD5B /* Frameworks */,
+				4253731A1323A9640084BD5B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4253731A1323A9640084BD5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				425373191323A9640084BD5B /* QoTrain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4253731C1323A9640084BD5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4253731D1323A9640084BD5B /* UIKit.framework */,
+				4253731F1323A9640084BD5B /* Foundation.framework */,
+				425373211323A9640084BD5B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		425373231323A9640084BD5B /* QoTrain */ = {
+			isa = PBXGroup;
+			children = (
+				42DE1F91135B937200D273DD /* CommunityNavController.h */,
+				42DE1F92135B937200D273DD /* CommunityNavController.m */,
+				42DE1F93135B937200D273DD /* CommunityTableViewController.h */,
+				42DE1F94135B937200D273DD /* CommunityTableViewController.m */,
+				42DE1F95135B937200D273DD /* FindPeopleViewController.h */,
+				42DE1F96135B937200D273DD /* FindPeopleViewController.m */,
+				42DE1F97135B937200D273DD /* LeaderboardViewController.h */,
+				42DE1F98135B937200D273DD /* LeaderboardViewController.m */,
+				42DE1F99135B937200D273DD /* LoginViewController.h */,
+				42DE1F9A135B937200D273DD /* LoginViewController.m */,
+				42DE1F9B135B937200D273DD /* MyWorkoutNavController.h */,
+				42DE1F9C135B937200D273DD /* MyWorkoutNavController.m */,
+				42DE1F9D135B937200D273DD /* MyWorkoutTableViewController.h */,
+				42DE1F9E135B937200D273DD /* MyWorkoutTableViewController.m */,
+				42DE1F9F135B937200D273DD /* QoTrainAppDelegate.h */,
+				42DE1FA0135B937200D273DD /* QoTrainAppDelegate.m */,
+				42DE1FA1135B937200D273DD /* SecondViewController.h */,
+				42DE1FA2135B937200D273DD /* SecondViewController.m */,
+				42DE1FA3135B937200D273DD /* WorkoutDetailViewController.h */,
+				42DE1FA4135B937200D273DD /* WorkoutDetailViewController.m */,
+				42C817C91345610000C9DB26 /* Resources */,
+				425373241323A9640084BD5B /* Supporting Files */,
+			);
+			name = QoTrain;
+			path = qotrain;
+			sourceTree = "<group>";
+		};
+		425373241323A9640084BD5B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42DE1FD6135B98AA00D273DD /* QoTrain-Info.plist */,
+				42DE1FD3135B98A100D273DD /* InfoPlist.strings */,
+				42DE1FAF135B938D00D273DD /* main.m */,
+				42DE1FB0135B938D00D273DD /* QoTrain-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42C817C91345610000C9DB26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42DE1FB3135B93CC00D273DD /* NIBs */,
+				42DE1FB2135B93C400D273DD /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		42DE1FB2135B93C400D273DD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				42DE1F6B135B932100D273DD /* checkbox_normal.png */,
+				42DE1F6C135B932100D273DD /* checkbox_selected.png */,
+				42DE1F6D135B932100D273DD /* community.png */,
+				42DE1F6F135B932100D273DD /* Default.png */,
+				42DE1F72135B932100D273DD /* Login_Orange.png */,
+				42DE1F74135B932100D273DD /* loginbox.png */,
+				42DE1F78135B932100D273DD /* Register_Orange.png */,
+				42DE1F79135B932100D273DD /* schedule.png */,
+				42DE1F7A135B932100D273DD /* workout.png */,
+				42DE1F68135B92FC00D273DD /* checkbox_highlighted.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		42DE1FB3135B93CC00D273DD /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				42DE1F8D135B936000D273DD /* MainWindow.xib */,
+				42DE1F8E135B936000D273DD /* SecondView.xib */,
+				42DE1F6E135B932100D273DD /* CommunityTableView.xib */,
+				42DE1F70135B932100D273DD /* FindPeopleViewController.xib */,
+				42DE1F71135B932100D273DD /* LeaderboardViewController.xib */,
+				42DE1F75135B932100D273DD /* LoginViewController.xib */,
+				42DE1F76135B932100D273DD /* MyWorkoutTableView.xib */,
+				42DE1F7B135B932100D273DD /* WorkoutDetailViewController.xib */,
+			);
+			name = NIBs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		425373181323A9640084BD5B /* QoTrain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 425373401323A9640084BD5B /* Build configuration list for PBXNativeTarget "QoTrain" */;
+			buildPhases = (
+				425373151323A9640084BD5B /* Sources */,
+				425373161323A9640084BD5B /* Frameworks */,
+				425373171323A9640084BD5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QoTrain;
+			productName = qotrain;
+			productReference = 425373191323A9640084BD5B /* QoTrain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		425373101323A9640084BD5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Student;
+			};
+			buildConfigurationList = 425373131323A9640084BD5B /* Build configuration list for PBXProject "QoTrain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4253730E1323A9640084BD5B;
+			productRefGroup = 4253731A1323A9640084BD5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				425373181323A9640084BD5B /* QoTrain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		425373171323A9640084BD5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42DE1F69135B92FC00D273DD /* checkbox_highlighted.png in Resources */,
+				42DE1F7C135B932100D273DD /* checkbox_normal.png in Resources */,
+				42DE1F7D135B932100D273DD /* checkbox_selected.png in Resources */,
+				42DE1F7E135B932100D273DD /* community.png in Resources */,
+				42DE1F7F135B932100D273DD /* CommunityTableView.xib in Resources */,
+				42DE1F80135B932100D273DD /* Default.png in Resources */,
+				42DE1F81135B932100D273DD /* FindPeopleViewController.xib in Resources */,
+				42DE1F82135B932100D273DD /* LeaderboardViewController.xib in Resources */,
+				42DE1F83135B932100D273DD /* Login_Orange.png in Resources */,
+				42DE1F85135B932100D273DD /* loginbox.png in Resources */,
+				42DE1F86135B932100D273DD /* LoginViewController.xib in Resources */,
+				42DE1F87135B932100D273DD /* MyWorkoutTableView.xib in Resources */,
+				42DE1F89135B932100D273DD /* Register_Orange.png in Resources */,
+				42DE1F8A135B932100D273DD /* schedule.png in Resources */,
+				42DE1F8B135B932100D273DD /* workout.png in Resources */,
+				42DE1F8C135B932100D273DD /* WorkoutDetailViewController.xib in Resources */,
+				42DE1F8F135B936000D273DD /* MainWindow.xib in Resources */,
+				42DE1F90135B936000D273DD /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		425373151323A9640084BD5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42DE1FA5135B937200D273DD /* CommunityNavController.m in Sources */,
+				42DE1FA6135B937200D273DD /* CommunityTableViewController.m in Sources */,
+				42DE1FA7135B937200D273DD /* FindPeopleViewController.m in Sources */,
+				42DE1FA8135B937200D273DD /* LeaderboardViewController.m in Sources */,
+				42DE1FA9135B937200D273DD /* LoginViewController.m in Sources */,
+				42DE1FAA135B937200D273DD /* MyWorkoutNavController.m in Sources */,
+				42DE1FAB135B937200D273DD /* MyWorkoutTableViewController.m in Sources */,
+				42DE1FAC135B937200D273DD /* QoTrainAppDelegate.m in Sources */,
+				42DE1FAD135B937200D273DD /* SecondViewController.m in Sources */,
+				42DE1FAE135B937200D273DD /* WorkoutDetailViewController.m in Sources */,
+				42DE1FB1135B938D00D273DD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42DE1FD3135B98A100D273DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42DE1FD4135B98A100D273DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4253733E1323A9640084BD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4253733F1323A9640084BD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		425373411323A9640084BD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/QoTrain-Prefix.pch";
+				INFOPLIST_FILE = "Resources/QoTrain-Info.plist";
+				PRODUCT_NAME = QoTrain;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		425373421323A9640084BD5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Other Sources/QoTrain-Prefix.pch";
+				INFOPLIST_FILE = "Resources/QoTrain-Info.plist";
+				PRODUCT_NAME = QoTrain;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		425373131323A9640084BD5B /* Build configuration list for PBXProject "QoTrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4253733E1323A9640084BD5B /* Debug */,
+				4253733F1323A9640084BD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		425373401323A9640084BD5B /* Build configuration list for PBXNativeTarget "QoTrain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425373411323A9640084BD5B /* Debug */,
+				425373421323A9640084BD5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 425373101323A9640084BD5B /* Project object */;
+}
