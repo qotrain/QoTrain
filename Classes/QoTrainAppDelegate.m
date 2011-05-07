@@ -6,7 +6,7 @@
 //  Copyright 2011 Student. All rights reserved.
 //
 
-#import "qotrainAppDelegate.h"
+#import "QoTrainAppDelegate.h"
 
 @implementation qotrainAppDelegate
 
@@ -29,6 +29,7 @@
     _splashScreen = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
     [self.window addSubview:self.splashScreen];
     [self.window makeKeyAndVisible];
+    [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay:0.5];
     return YES;
 }
 

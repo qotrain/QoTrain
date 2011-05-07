@@ -1,15 +1,15 @@
 //
-//  CommunityNavController.m
-//  qotrain
+//  MyWorkoutViewController.m
+//  QoTrain
 //
-//  Created by Joshua Newman on 3/6/11.
+//  Created by Joshua Newman on 5/5/11.
 //  Copyright 2011 Student. All rights reserved.
 //
 
-#import "CommunityNavController.h"
+#import "MyWorkoutViewController.h"
 
 
-@implementation CommunityNavController
+@implementation MyWorkoutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,20 +35,11 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
 }
-*/
 
 - (void)viewDidUnload
 {
