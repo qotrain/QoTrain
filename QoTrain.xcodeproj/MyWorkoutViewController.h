@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Cocoafish.h"
 
 extern NSString * const kMyWorkoutViewDismissedLoginView;
 
-@interface MyWorkoutViewController : UIViewController {
+@class CCNetworkManager;
+
+@interface MyWorkoutViewController : UIViewController <CCNetworkManagerDelegate> {
     
 }
 
@@ -20,5 +23,6 @@ extern NSString * const kMyWorkoutViewDismissedLoginView;
 @property (nonatomic, retain) UILabel *workoutsLabel;
 @property (nonatomic, retain) UILabel *medalsLabel;
 @property (nonatomic, retain) UILabel *caloriesLabel;
+@property (nonatomic, retain) CCNetworkManager *networkManager;
 
 @end

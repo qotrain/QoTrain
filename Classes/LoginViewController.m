@@ -43,13 +43,16 @@
 @synthesize registerNavBar;
 @synthesize rememberPassword;
 @synthesize registerScreenShowing;
-@synthesize loginConnection=_loginConnection;
+@synthesize networkManager = _networkManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        if (_networkManager == nil) {
+            _networkManager = [[CCNetworkManager alloc] initWithDelegate:self];
+        }
     }
     return self;
 }
@@ -71,7 +74,6 @@
     [loginNavBar release];
     [registerNavBar release];
     [rememberPassword release];
-    [_loginConnection release];_loginConnection=nil;
     [super dealloc];
 }
 
@@ -152,11 +154,7 @@
 
 - (void)loginClicked:(id)sender
 {
-    NSString *post =[NSString stringWithFormat:@"username=%@&password=%@",lusernameField.text, lpasswordField.text];
-    NSString *hostStr = @"http://qotrain.com/login.php?";
-    hostStr = [hostStr stringByAppendingString:post];
-    NSURLRequest *loginRequest  = [[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:hostStr]] autorelease];
-    _loginConnection = [[NSURLConnection alloc] initWithRequest:loginRequest delegate:self];
+    [self.networkManager login:self.lusernameField.text password:self.lpasswordField.text];
 }
 
 - (IBAction)signUpClicked:(id)sender
@@ -186,19 +184,13 @@
         return;
     }
 
-    NSString *post =[NSString stringWithFormat:@"username=%@&password=%@",susernameField.text, spasswordField.text];
-    NSString *hostStr = @"http://qotrain.com/create.php?";
-    hostStr = [hostStr stringByAppendingString:post];
-    NSData *dataURL = [NSData dataWithContentsOfURL:[NSURL URLWithString:hostStr]];    
-    NSString *serverOutput = [[NSString alloc] initWithData:dataURL encoding: NSASCIIStringEncoding];
+    // create a mutable user object
+    CCMutableUser *newUser = [[[CCMutableUser alloc] init] autorelease];
+    newUser.email = self.semailField.text;
+    newUser.username = self.susernameField.text;
     
-    if([serverOutput isEqualToString:@"Success"]){
-        [self.parentViewController dismissModalViewControllerAnimated:YES];
-    } else {
-        UIAlertView *alertsuccess = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Username already exists. Please choose a different username." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertsuccess show];
-        [alertsuccess release];
-    }
+    // register the user
+    [self.networkManager registerUser:newUser password:self.spasswordField.text passwordConfirmation:self.srepasswordField.text];
 }
 
 - (IBAction)checkboxButton:(id)sender{
@@ -376,32 +368,27 @@
 
 # pragma mark - 
 
--(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    
-}
-
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    NSString *serverOutput = [[NSString alloc] initWithData:data encoding: NSASCIIStringEncoding];
-    
-    if([serverOutput isEqualToString:@"Success"]){
-        if (self.rememberPassword.selected) {
-            [[NSUserDefaults standardUserDefaults] setObject:self.lusernameField.text forKey:@"username"];
-            [[NSUserDefaults standardUserDefaults] setObject:self.lpasswordField.text forKey:@"password"];
-        } else {
-            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
-            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"password"];
-        }
+-(void)networkManager:(CCNetworkManager *)networkManager didCreate:(NSArray *)objectArray objectType:(Class)objectType {
+    if (objectType == [CCUser class]) {
+        CCUser *user = [objectArray objectAtIndex:0];
+        NSLog(@"didRegisterUser %@", user);
         [self.parentViewController dismissModalViewControllerAnimated:YES];
         [[NSNotificationCenter defaultCenter] postNotificationName:kMyWorkoutViewDismissedLoginView object:nil];
-    } else {
-        UIAlertView *alertsuccess = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Incorrect username or password. Please try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertsuccess show];
-        [alertsuccess release];
-        self.lpasswordField.text = nil;
     }
 }
 
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+-(void)networkManager:(CCNetworkManager *)networkManager didLogin:(CCUser *)user
+{
+    if (self.rememberPassword.selected) {
+        [[NSUserDefaults standardUserDefaults] setObject:self.lusernameField.text forKey:@"username"];
+        [[NSUserDefaults standardUserDefaults] setObject:self.lpasswordField.text forKey:@"password"];
+    }
+    [self.parentViewController dismissModalViewControllerAnimated:YES];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kMyWorkoutViewDismissedLoginView object:nil];
+}
+
+-(void)networkManager:(CCNetworkManager *)networkManager didFailWithError:(NSError *)error
+{
     UIAlertView *alertsuccess = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alertsuccess show];
     [alertsuccess release];

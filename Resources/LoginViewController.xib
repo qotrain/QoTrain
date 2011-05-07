@@ -102,10 +102,13 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="684295898">
+								<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="355678997">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">loginbg.png</string>
 								</object>
+								<reference key="IBUIDisabledBackgroundImage" ref="355678997"/>
+								<reference key="IBUISelectedBackgroundImage" ref="355678997"/>
+								<reference key="IBUINormalBackgroundImage" ref="355678997"/>
 							</object>
 							<object class="IBUIImageView" id="556007078">
 								<reference key="NSNextResponder" ref="1041070541"/>
@@ -332,7 +335,10 @@
 									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 								</object>
 								<reference key="IBUINormalTitleShadowColor" ref="766309236"/>
-								<reference key="IBUINormalBackgroundImage" ref="684295898"/>
+								<reference key="IBUIHighlightedBackgroundImage" ref="355678997"/>
+								<reference key="IBUIDisabledBackgroundImage" ref="355678997"/>
+								<reference key="IBUISelectedBackgroundImage" ref="355678997"/>
+								<reference key="IBUINormalBackgroundImage" ref="355678997"/>
 							</object>
 							<object class="IBUIButton" id="928694791">
 								<reference key="NSNextResponder" ref="209044331"/>
@@ -875,6 +881,7 @@
 					<string>43.IBPluginDependency</string>
 					<string>43.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 					<string>46.IBPluginDependency</string>
+					<string>46.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 					<string>5.IBPluginDependency</string>
 					<string>50.IBPluginDependency</string>
 					<string>51.IBPluginDependency</string>
@@ -882,6 +889,7 @@
 					<string>6.IBPluginDependency</string>
 					<string>69.IBPluginDependency</string>
 					<string>76.IBPluginDependency</string>
+					<string>76.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -902,6 +910,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="2"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<real value="1"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -909,6 +918,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<real value="3"/>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">

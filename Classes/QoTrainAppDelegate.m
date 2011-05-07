@@ -7,6 +7,10 @@
 //
 
 #import "QoTrainAppDelegate.h"
+#import "Cocoafish.h"
+
+static NSString * const COCOAFISH_OAUTH_CONSUMER_KEY = @"JBnlh4rybBqTzQfixaRzFVZZMbweRvCQ";
+static NSString * const COCOAFISH_OAUTH_CONSUMER_SECRET = @"Shxj0g2R64wyvzP4F2fxx7itzztLRHHA";
 
 @implementation qotrainAppDelegate
 
@@ -23,6 +27,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    // Initialize Cocoafish
+    [Cocoafish initializeWithOauthConsumerKey:COCOAFISH_OAUTH_CONSUMER_KEY consumerSecret:COCOAFISH_OAUTH_CONSUMER_SECRET customAppIds:nil];
+
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
     
@@ -31,6 +38,11 @@
     [self.window makeKeyAndVisible];
     [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay:0.5];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+	return [[Cocoafish defaultCocoafish] handleOpenURL:url];
 }
 
 -(void)hideSplashScreen 

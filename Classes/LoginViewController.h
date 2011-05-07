@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Cocoafish.h"
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate> {
-    NSURLConnection *_loginConnection;
+@interface LoginViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, CCNetworkManagerDelegate> {
 }
 @property (nonatomic, retain) IBOutlet UIView *signUpView;
 @property (nonatomic, retain) IBOutlet UIScrollView *lscrollView;
@@ -27,6 +27,6 @@
 @property (nonatomic, retain) IBOutlet UIButton *registerButton;
 @property (nonatomic, retain) IBOutlet UIButton *signUpButton;
 @property (nonatomic, retain) IBOutlet UIButton *rememberPassword;
-@property (nonatomic, retain) NSURLConnection *loginConnection;
+@property (nonatomic, retain) CCNetworkManager *networkManager;
 
 @end

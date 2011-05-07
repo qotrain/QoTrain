@@ -14,6 +14,7 @@ NSString * const kMyWorkoutViewDismissedLoginView = @"kMyWorkoutViewDismissedLog
 
 @interface MyWorkoutViewController ()
 - (void)showButtons:(NSNotification*)aNotification;
+- (void)logoutClicked:(id)sender;
 @end
 
 @implementation MyWorkoutViewController
@@ -24,6 +25,7 @@ NSString * const kMyWorkoutViewDismissedLoginView = @"kMyWorkoutViewDismissedLog
 @synthesize workoutsLabel;
 @synthesize medalsLabel;
 @synthesize caloriesLabel;
+@synthesize networkManager = _networkManager;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,6 +56,9 @@ NSString * const kMyWorkoutViewDismissedLoginView = @"kMyWorkoutViewDismissedLog
     self.title = @"My Workout";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showButtons:) name:kMyWorkoutViewDismissedLoginView object:nil];
+    
+    UIBarButtonItem *logoutButton = [[[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStyleBordered target:self action:@selector(logoutClicked:)] autorelease];
+    [self.navigationItem setLeftBarButtonItem:logoutButton];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -70,8 +75,13 @@ NSString * const kMyWorkoutViewDismissedLoginView = @"kMyWorkoutViewDismissedLog
     self.medalsButton.alpha = 0.0;
 
     [(qotrainAppDelegate*)[[UIApplication sharedApplication] delegate] performSelector:@selector(hideSplashScreen) withObject:nil afterDelay:0.2];
-    LoginViewController *loginViewController = [[[LoginViewController alloc] initWithNibName:[[LoginViewController class] description] bundle:nil] autorelease];
-    [self presentModalViewController:loginViewController animated:NO];
+    
+    CCUser *currentUser = [[Cocoafish defaultCocoafish] getCurrentUser];
+
+    if (!currentUser) {
+        LoginViewController *loginViewController = [[[LoginViewController alloc] initWithNibName:[[LoginViewController class] description] bundle:nil] autorelease];
+        [self presentModalViewController:loginViewController animated:NO];
+    }
     
     UIImageView *workoutButtonImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Road.png"]] autorelease];
     [self.workoutButton addSubview:workoutButtonImage];
@@ -121,6 +131,10 @@ NSString * const kMyWorkoutViewDismissedLoginView = @"kMyWorkoutViewDismissedLog
     caloriesDescription.text = @"calories";
     [self.caloriesButton addSubview:self.caloriesLabel];
     [self.caloriesButton addSubview:caloriesDescription];
+    
+    if (_networkManager == nil) {
+		_networkManager = [[CCNetworkManager alloc] initWithDelegate:self];
+	}
 }
 
 - (void)viewDidUnload
@@ -143,6 +157,32 @@ NSString * const kMyWorkoutViewDismissedLoginView = @"kMyWorkoutViewDismissedLog
         [self.medalsButton setAlpha:1.0];
         [self.caloriesButton setAlpha:1.0];
     } completion:nil];
+}
+
+- (void)logoutClicked:(id)sender {
+    [self.networkManager logout];
+}
+
+#pragma mark -
+
+- (void)didLogout:(CCNetworkManager *)networkManager
+{	
+	// show login window
+	LoginViewController *loginViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+	[self presentModalViewController:loginViewController animated:YES];	
+}
+
+- (void)networkManager:(CCNetworkManager *)networkManager didFailWithError:(NSError *)error
+{
+	NSString *msg = [NSString stringWithFormat:@"%@.",[error localizedDescription]];
+	UIAlertView *alert = [[UIAlertView alloc] 
+						  initWithTitle:@"Error" 
+						  message:msg
+						  delegate:self 
+						  cancelButtonTitle:@"OK"
+						  otherButtonTitles:nil];
+	[alert show];
+	[alert release];
 }
 
 @end

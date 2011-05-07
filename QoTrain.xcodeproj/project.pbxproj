@@ -715,7 +715,7 @@
 		425373411323A9640084BD5B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -725,6 +725,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/QoTrain-Prefix.pch";
 				INFOPLIST_FILE = "Resources/QoTrain-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = QoTrain;
 				WRAPPER_EXTENSION = app;
 			};
@@ -742,6 +746,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/QoTrain-Prefix.pch";
 				INFOPLIST_FILE = "Resources/QoTrain-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = QoTrain;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
